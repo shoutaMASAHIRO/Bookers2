@@ -11,6 +11,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @user = User.find(current_user.id)
     #(current_user.id), (params[:id]) 違いについてもう一度確認
+    @book_comment = BookComment.new
   end
 
     # 投稿データの保存
